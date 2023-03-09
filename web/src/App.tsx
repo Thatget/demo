@@ -1,4 +1,3 @@
-import './App.css'
 import RootRouterProvider from './routers/root'
 
 function App() {

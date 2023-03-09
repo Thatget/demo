@@ -10,11 +10,11 @@ const ChatContent: React.FC<Props> = ({ socket }) => {
   })
   socket.emit('ping',{})
   return (
-    <div>
+    <div style={{height: 'calc(100vh - 50px)'}}>
       <div>
         <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+          Hello world!
+        </h1>
       </div>
     </div>
   )

@@ -9,9 +9,17 @@ const Chat = () => {
   });
 
   return (
-    <div style={{height: '100vh'}}>
-      <ChatContent socket={socket} />
-      <ChatInput socket={socket} />
+    <div className="container mx-auto grid grid-cols-3">
+      <div>
+        side
+      </div>
+      <div className="h-screen">
+        <ChatContent socket={socket} />
+        <ChatInput socket={socket} />
+      </div>
+      <div>
+        abc
+      </div>
     </div>
   )
 }
