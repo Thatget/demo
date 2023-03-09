@@ -15,9 +15,15 @@ const appServer = app.listen( port ,()=>{
 
 
 const io = new Server(appServer, {
-  // ...
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
 });
 
 io.on("connection", (socket) => {
-  // ...
+  socket.on('check', data => {
+    socket.emit('sent-data', {message: "OK !"})
+    console.log(data)
+  })
 });
